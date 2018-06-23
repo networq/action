@@ -1,0 +1,7 @@
+name: assignee
+listed: false
+
+fields:
+  actions:
+    type: networq:planning:action
+    reverse: assignee

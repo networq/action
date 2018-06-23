@@ -1,0 +1,9 @@
+<ul class="list-group">
+  {% for action in node['networq:action:assignee']['actions'] %}
+
+    <li class="list-group-item">
+        <h3>{{ action['networq:core:node']['name']}}</h3>
+        {{ action|nodeButton|raw }}<br />
+    </li>
+  {% endfor %}
+</ul>

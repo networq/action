@@ -1,0 +1,19 @@
+name: networq:action
+description: Action / planning types
+license: MIT
+
+widgets:
+  actionProperties:
+    type: networq:action:action
+    hook: properties
+    label: Action properties
+
+  actionsTab:
+    type: networq:action:assignee
+    hook: tabs
+    label: Actions
+
+  actions2Tab:
+    type: networq:action:list
+    hook: tabs
+    label: Actions

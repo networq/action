@@ -1,0 +1,8 @@
+name: list
+
+icon: list
+
+fields:
+  actions:
+    type: networq:action:action[]
+    reverse: list

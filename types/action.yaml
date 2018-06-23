@@ -1,0 +1,15 @@
+name: action
+
+fields:
+  status:
+    type: string
+  details:
+    type: string
+  trigger:
+    type: string
+  assignee:
+    type: networq:action:assignee
+  list:
+    type: networq:action:list
+  completedAt:
+    type: string
