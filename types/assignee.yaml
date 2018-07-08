@@ -3,5 +3,5 @@ listed: false
 
 fields:
   actions:
-    type: networq:planning:action
+    type: networq:action:action
     reverse: assignee

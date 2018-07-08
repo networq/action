@@ -1,23 +1,27 @@
 <ul>
     <li>Status:<br />
-        {# <a href="{{ node|url }}"> #}
-            {{ node['networq:action:action']['status'] }}
-        {# </a> #}
+        {{ node['networq:action:action']['status'] }}
     </li>
     <li>Completed:<br />
-        {# <a href="{{ node|url }}"> #}
-            {{ node['networq:action:action']['completedAt']|default('-') }}
-        {# </a> #}
+        {{ node['networq:action:action']['completedAt']|default('-') }}
     </li>
     <li>Assignee:<br />
-        {# <a href="{{ node|url }}"> #}
+        {% if node['networq:action:action']['assignee'] %}
+        <a href="{{ node['networq:action:action']['assignee']|nodePath }}">
             {{ node['networq:action:action']['assignee']['networq:core:node']['name'] }}
-        {# </a> #}
+        </a>
+        {% else %}
+        Unassigned
+        {% endif %}
     </li>
     <li>List:<br />
-        {# <a href="{{ node|url }}"> #}
+        {% if node['networq:action:action']['list'] %}
+        <a href="{{ node['networq:action:action']['list']|nodePath }}">
             {{ node['networq:action:action']['list']['networq:core:node']['name'] }}
-        {# </a> #}
+        </a>
+        {% else %}
+        -
+        {% endif %}
     </li>
 
 </ul>
